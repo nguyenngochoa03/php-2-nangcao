@@ -1,4 +1,7 @@
 <?php
+ class pdo{
+
+ }
 const DBNAME = "web17312";
 const DBUSER = "root";
 const DBPASS = "";

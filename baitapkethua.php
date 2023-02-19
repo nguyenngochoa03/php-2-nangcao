@@ -46,44 +46,63 @@ class Connguoi{
 
 }
 class Sinhvien extends Connguoi{
-    public function __construct($Hoten,$namsinh,$diachi,$sdt,$email)
+     public $diemtoan;
+     public $diemhoa;
+     public $diemly;
+
+    public function __construct($diemtoan,$diemhoa,$diemly)
     {
-        $this ->Hoten = $Hoten;
-        $this ->namsinh = $namsinh;
-        $this ->diachi = $diachi;
-        $this->sdt = $sdt;
-        $this ->email = $email;
-    }
-//    public function hienThiThongTin(){
-//        echo "họ tên " .$this->Hoten."</br>". "địa chỉ".$this->diachi."</br>" . "Năm sinh ".$this->namsinh ."</br>" ."Tuổi".$this->tinhTuoi(). "số điện thoại".$this->sdt."</br>" . "email".$this->email."</br>" ;
-//    }
-
-    public function ĐiemTB(){
+        $this ->diemtoan= $diemtoan;
+        $this ->diemhoa = $diemhoa;
+        $this ->diemly = $diemly;
 
     }
-    public function Đientoan(){
-      
-   }
-    public function Điemly(){
+    public function tinhDiemTB(){
+        return($this->diemtoan + $this->diemhoa + $this->diemly)/3;
+    }
+    public function xepLoai($dtb) {
+        if($dtb >=5) {
+            return "đạt";
+        }elseif($dtb < 5) {
+            return "không đạt";
+        }
+    }
+    public function hienThiThongTinsv(){
+        echo "họ tên : " .$this->Hoten."</br>"."Tuổi :".$this->tinhTuoi($this->namsinh)."<br>". "địa chỉ:".$this->diachi."</br>"
+ . "số điện thoại:".$this->sdt."</br>" . "email:".$this->email."</br>". " điểm trung bình : " .$this->tinhDiemTB()."</br>"
+            ." xếp loại : " .$this->xepLoai($this->tinhDiemTB())."</br>"  ;
+    }
 
-   }
-   public function Điemhoa(){
 
-   }
 }
 class Giangvien extends Connguoi {
-    public function Luongcb(){
+    public $Luongcb;
+    public $Sogioday;
+    public function __construct($Luongcb,$Sogioday){
+     $this->Luongcb =$Luongcb;
+     $this->Sogioday =$Sogioday;
+    }
+    public function tongLuong(){
+        return $this->Luongcb * $this->Sogioday;
+    }
+    public function hienThiThongTingv(){
+        echo "họ tên : " .$this->Hoten."</br>"."Tuổi :".$this->tinhTuoi($this->namsinh)."<br>". "địa chỉ:".$this->diachi."</br>"
+            . "số điện thoại:".$this->sdt."</br>" . "email:".$this->email."</br>". "Tổng Lương : ".$this->tongLuong();
+    }
+}
+$sv = new sinhvien(8,9,10);
+$sv->setHoten("Hoa");
+$sv->setnamsinh(2003);
+$sv->setdiachi("phương canh");
+$sv->setsdt("0964535519");
+$sv->setemail("hoa1233@gmail.com");
+$sv->hienThiThongTinsv();
 
-}
-public function Sogioday(){
-
-}
-}
-$vietnam = new Connguoi( );
-//$vietnam->hienThiThongTin();
-$vietnam->setHoten("Hoa");
-$vietnam->setnamsinh(2003);
-$vietnam->setdiachi("phương canh");
-$vietnam->setsdt("0964535519");
-$vietnam->setemail("hoa1233@gmail.com");
+$sv = new Giangvien(8,9);
+$sv->setHoten(" Ngọc Hoa");
+$sv->setnamsinh(1999);
+$sv->setdiachi("hà nội ");
+$sv->setsdt("09645300000");
+$sv->setemail("ngochoa1233@gmail.com");
+$sv->hienThiThongTingv();
 ?>

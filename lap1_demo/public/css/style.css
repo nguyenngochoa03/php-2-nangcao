@@ -1,0 +1,89 @@
+/*body {*/
+/*    margin: 0;*/
+/*    font-family: 'Tahoma';*/
+/*}*/
+
+h1{
+    text-align: center;
+    color: #cc3700;
+    /*background: white;*/
+    /*border-radius: 20px;*/
+    font-family: 'Roboto', sans-serif;
+    background: #fcdb34;
+}
+.form-group{
+    background: #fcdb34;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+table{
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    color: #2c2c2c;
+}
+.menu{
+    background:#2c2c2c;
+    /*border-radius: 5px;*/
+    text-align: center;
+}
+.menu ul {
+    padding: 25px;
+}
+.menu ul li{
+    list-style-type: none;
+    display: inline;
+    padding: 0px 50px;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2vw;
+    color: #ffffff;
+    transition: 0.5s;
+}
+.menu ul li a:hover{
+    color: #F9F400;
+    font-size: 1vw;
+    font-weight: 900;
+}
+.group{
+    padding: 20px 80px;
+
+}
+.group label{
+    font-size: 1.5vw;
+    padding: 0px 20px;
+    color: #0f1531;
+}
+.group input{
+    padding: 7px 200px;
+    border-radius: 20px;
+
+}
+.group1{
+    padding: 20px 80px;
+    text-align: center;
+    font-size: 1.5vw;
+}
+.group1 input{
+    padding: 7px 80px;
+    border-radius: 10px;
+}
+.group1 input:hover{
+    background: #cc3700;
+}
+
+footer {
+    background-color:#0f1531 ;
+    text-align: center;
+    padding: 20px 0;
+}
+footer span {
+    color: #fff;
+    font-size: 18px;
+}

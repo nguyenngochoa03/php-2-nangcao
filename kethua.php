@@ -15,14 +15,27 @@ class Connguoi{
     public  function setTay($tay){
         $this->tay = $tay;
     }
-   
+    public function __construct($chan,$tay,$mat,$mui)
+    {
+        $this ->chan= $chan;
+        $this ->tay = $tay;
+        $this ->mat = $mat;
+        $this ->mui = $mui;
+    }
 }
 class Nguoilon extends Connguoi{
      public $longnach;
-     
+    public function __construct($chan,$tay,$mat,$mui,$longnach){
+        $this ->chan= $chan;
+        $this ->tay = $tay;
+        $this ->mat = $mat;
+        $this ->mui = $mui;
+        $this->longnach=$longnach;
+    }
 
     public function di(){
-    echo "đi bằng 2 chân ".$this->chan."chan";
+    echo "đi bằng 2 chân ".$this->chan."chan".$this->tay."tay".$this->mat."mat".$this->mui."mũi";
+    echo $this->longnach;
     }
     
     public function an(){
@@ -44,9 +57,10 @@ class Trecon extends Connguoi{
     }
 
 }
-$hoa = new Nguoilon();
-$hoa -> an();
-$hoa->setChan(2);
+//$hoa = new Nguoilon();
+//$hoa -> an();
+//$hoa->setChan(2);
+$hoa = new Nguoilon("2","2","2","1","nhiều");
 $hoa -> di();
 $tc = new Trecon();
 $tc -> bo();
